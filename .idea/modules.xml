@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/begin.iml" filepath="$PROJECT_DIR$/.idea/begin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/begin_golang.iml" filepath="$PROJECT_DIR$/.idea/begin_golang.iml" />
     </modules>
   </component>
 </project>

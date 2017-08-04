@@ -2,8 +2,7 @@ package routes
 
 import (
 	"net/http"
-	"github.com/gorilla/mux"
-	"begin/v6/handlers"
+	"begin_golang/v6/handlers"
 )
 
 type Route struct {
@@ -36,16 +35,4 @@ var routes = Routes{
 	},
 }
 
-func NewRouter() *mux.Router {
-	router := mux.NewRouter().StrictSlash(true)
 
-	for _, route := range routes {
-		router.
-		Methods(route.Method).
-			Path(route.Pattern).
-			Name(route.Name).
-			Handler(route.HandlerFunc)
-	}
-
-	return router
-}

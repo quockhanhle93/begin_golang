@@ -3,9 +3,10 @@ package handlers
 import (
 	"net/http"
 	"fmt"
-	"begin/v6/model"
+	"begin_golang/v6/model"
 	"encoding/json"
 	"github.com/gorilla/mux"
+	"time"
 )
 
 func Index(w http.ResponseWriter, r *http.Request) {
@@ -17,12 +18,16 @@ func TodoIndex(w http.ResponseWriter, r *http.Request) {
 		model.Todo{
 			Name:      "Write presentation",
 			Completed: true,
+			Due: time.Now(),
 		},
 		model.Todo{
 			Name:      "Host meetup",
 			Completed: false,
 		},
 	}
+
+	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
+	w.WriteHeader(http.StatusOK)
 
 	err := json.NewEncoder(w).Encode(todos)
 

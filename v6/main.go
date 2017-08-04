@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
-	"begin/v6/routes"
+	"begin_golang/v6/routes"
 )
 
 func main() {
